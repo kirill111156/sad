@@ -175,7 +175,7 @@ body{padding-top:76px}
 body{padding-top:92px}
 .footer-logo .logo-desktop{width:255px}
 @media(max-width:1180px){.brand-logo .logo-desktop{width:220px}.header-row{gap:14px}.nav{gap:11px}}
-@media(max-width:680px){body{padding-top:84px}.header-row{min-height:84px}.nav{top:84px}.brand-logo .logo-desktop{display:none}.brand-logo .logo-mobile{display:block;width:76px;height:76px;aspect-ratio:1}.footer-logo .logo-mobile{width:118px;height:118px}}
+@media(max-width:680px){body{padding-top:76px}.header-row{min-height:76px}.nav{top:76px}.brand-logo .logo-desktop{display:none}.brand-logo .logo-mobile{display:block;width:min(240px,calc(100vw - 118px));height:auto;aspect-ratio:1320/260}.footer-logo .logo-mobile{width:min(260px,calc(100vw - 48px));height:auto}}
 
 /* Services overview and catalog */
 .service-preview{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}

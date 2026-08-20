@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 260" role="img" aria-labelledby="title desc">
+  <title id="title">Сад Монтессори Жулебино — мобильный горизонтальный логотип</title>
+  <desc id="desc">Горизонтальный логотип для мобильной шапки: солнце и росток слева, справа крупная надпись Сад Монтессори и подпись Жулебино.</desc>
+  <defs>
+    <style>
+      .green { fill: #6FA486; }
+      .green-light { fill: #8EC29D; }
+      .yellow { fill: #F3D56B; }
+      .wordmark { font-family: "Manrope", "Onest", "Inter", Arial, sans-serif; font-weight: 800; }
+      .submark { font-family: "Manrope", "Onest", "Inter", Arial, sans-serif; font-weight: 700; letter-spacing: 0.04em; fill: #6FA486; }
+    </style>
+  </defs>
+  <g transform="translate(24 18)">
+    <circle class="yellow" cx="84" cy="52" r="28"/>
+    <g class="yellow">
+      <rect x="79" y="6" width="10" height="20" rx="5"/>
+      <rect x="42" y="48" width="22" height="10" rx="5"/>
+      <rect x="104" y="48" width="22" height="10" rx="5"/>
+      <rect x="55" y="18" width="10" height="18" rx="5" transform="rotate(-45 60 27)"/>
+      <rect x="103" y="18" width="10" height="18" rx="5" transform="rotate(45 108 27)"/>
+    </g>
+    <path class="green-light" d="M16 184c14-34 48-52 84-52s70 18 84 52H16z"/>
+    <path d="M98 158c-3-42 8-71 24-95" fill="none" stroke="#6FA486" stroke-width="12" stroke-linecap="round"/>
+    <path class="green-light" d="M94 114c-34 0-57-16-68-44 32 0 57 15 68 44z"/>
+    <path class="green" d="M109 88c8-34 30-55 62-61-4 31-25 54-62 61z"/>
+  </g>
+  <g transform="translate(230 88)">
+    <text x="0" y="0" font-size="66" class="wordmark green">Сад Монтессори</text>
+    <text x="2" y="52" font-size="28" class="submark">ЖУЛЕБИНО</text>
+  </g>
+</svg>
+
