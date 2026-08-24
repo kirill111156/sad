@@ -226,3 +226,8 @@ body{padding-top:92px}
 .form-status{min-height:24px;font-size:15px;font-weight:700}
 .form-status.success{color:#376b3c}.form-status.error{color:#9a3f2d}
 .mail-form button:disabled{opacity:.65;cursor:wait;transform:none}
+
+/* Homepage hero: match the other section headings and keep the image balanced. */
+.hero h1{font-size:clamp(36px,4vw,48px)}
+.hero .media-placeholder.has-photo{max-width:530px}
+@media(max-width:680px){.hero h1{font-size:32px}}
