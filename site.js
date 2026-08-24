@@ -9,7 +9,27 @@ document.querySelectorAll('[data-header]').forEach(el=>el.innerHTML=`<a class="s
 document.querySelector('main')?.setAttribute('id','main');
 document.querySelectorAll('[data-footer]').forEach(el=>el.innerHTML=`<footer class="site-footer"><div class="container footer-grid"><div><a class="brand brand-logo footer-logo" href="index.html" aria-label="Сад Мир Монтессори в Жулебино — главная">${responsiveLogoMarkup}</a><p>Частный детский сад для детей от 1,5 до 7 лет.</p><p class="fine">Стоимость и наличие мест уточняйте у администратора. Информация на сайте не является публичной офертой.</p></div><div class="footer-links"><strong>Разделы</strong>${pages.slice(1).map(([u,l])=>`<a href="${u}">${l}</a>`).join('')}</div><div><strong>Контакты</strong><p><a href="tel:+79264835949">+7 (926) 483-59-49</a><br>Москва, ул. Авиаконструктора Миля, 11, корп. 1<br>Пн–пт, 08:00–19:00</p><p><a href="privacy.html">Политика обработки данных</a></p></div></div></footer><div class="mobile-cta"><a class="btn secondary" href="tel:+79264835949">Позвонить</a><a class="btn" href="contacts.html#tour">Экскурсия</a></div>`);
 document.addEventListener('click',e=>{if(e.target.closest('.menu-btn')){const b=e.target.closest('.menu-btn'),n=document.querySelector('.nav');n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'))}});
-document.querySelectorAll('.mail-form').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const subject=encodeURIComponent('Заявка на экскурсию — Сад Мир Монтессори');const body=encodeURIComponent(`Имя родителя: ${d.get('name')}\nТелефон: ${d.get('phone')}\nВозраст ребёнка: ${d.get('age')||'не указан'}\nКомментарий: ${d.get('message')||'—'}`);location.href=`mailto:kirillmol@mail.ru?subject=${subject}&body=${body}`;}));
+document.querySelectorAll('.mail-form').forEach(form=>{
+  form.insertAdjacentHTML('beforeend','<div class="form-honeypot" aria-hidden="true"><label>Не заполняйте это поле<input name="website" tabindex="-1" autocomplete="off"></label></div><div class="form-status" role="status" aria-live="polite"></div>');
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const button=form.querySelector('button[type="submit"],button:not([type])');
+    const status=form.querySelector('.form-status');
+    const originalText=button?.textContent||'Отправить';
+    const data=new FormData(form);
+    data.set('page',location.pathname);
+    if(button){button.disabled=true;button.textContent='Отправляем…';}
+    status.textContent='';status.className='form-status';
+    try{
+      const response=await fetch('send.php',{method:'POST',body:data,headers:{Accept:'application/json'}});
+      const result=await response.json();
+      if(!response.ok||!result.ok)throw new Error(result.message||'Не удалось отправить заявку.');
+      form.reset();status.textContent=result.message;status.classList.add('success');
+    }catch(error){
+      status.textContent=error.message||'Не удалось отправить заявку. Позвоните нам по телефону.';status.classList.add('error');
+    }finally{if(button){button.disabled=false;button.textContent=originalText;}}
+  });
+});
 document.querySelectorAll('.mail-form input,.mail-form select,.mail-form textarea').forEach(field=>{if(!field.getAttribute('aria-label'))field.setAttribute('aria-label',field.placeholder||({name:'Имя родителя',phone:'Телефон',age:'Возраст ребёнка',message:'Комментарий'}[field.name]||field.name));});
 if(file==='index.html'){
   const reviews=[...document.querySelectorAll('.section')].find(s=>s.textContent.includes('Что говорят родители'));

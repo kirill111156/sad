@@ -220,3 +220,9 @@ body{padding-top:92px}
   .grid-3:has(> .quote){width:calc(100% + 16px);margin-left:-8px;gap:16px}
   .grid-3>.quote{padding:26px 24px;font-size:18px}
 }
+
+/* Server-side form delivery */
+.form-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.form-status{min-height:24px;font-size:15px;font-weight:700}
+.form-status.success{color:#376b3c}.form-status.error{color:#9a3f2d}
+.mail-form button:disabled{opacity:.65;cursor:wait;transform:none}
