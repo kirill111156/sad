@@ -231,3 +231,60 @@ body{padding-top:92px}
 .hero h1{font-size:clamp(36px,4vw,48px)}
 .hero .media-placeholder.has-photo{max-width:530px}
 @media(max-width:680px){.hero h1{font-size:32px}}
+
+/* Director profile */
+.director-intro{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:48px}
+.director-hero h1{font-size:clamp(34px,3.5vw,52px);overflow-wrap:break-word}
+.director-photo{margin:0;min-width:0}
+.director-photo img{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow)}
+.director-experience{display:inline-block;padding:10px 18px;background:var(--sun-soft);border-radius:14px;color:var(--ink-strong)}
+.director-details{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.director-details h2{font-size:clamp(28px,3vw,38px)}
+.director-list{padding-left:22px;margin-bottom:0}
+.director-list li{padding-left:4px;margin-bottom:16px}
+.director-list li::marker{color:#456c48}
+.director-mission{max-width:900px;margin:auto;padding:clamp(24px,5vw,48px)}
+@media(max-width:980px){.director-intro,.director-details{grid-template-columns:1fr;gap:28px}.director-photo{max-width:591px}.director-hero h1{max-width:700px}}
+
+/* Unified price cards */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.tariff-card{position:relative;min-width:0;padding:30px;border-radius:26px;border:1px solid #d6e5ce;background:linear-gradient(155deg,#fff 30%,#f1f8e9);box-shadow:0 16px 42px rgba(64,105,70,.08);overflow:hidden}
+.tariff-card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--green),var(--sun))}
+.tariff-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.tariff-number{display:grid;place-items:center;width:40px;height:40px;border-radius:14px;background:var(--sun-soft);font-size:14px;font-weight:800;color:var(--ink-strong)}
+.tariff-tag{padding:5px 12px;border-radius:99px;background:var(--mint);font-size:13px;font-weight:700;color:#456c48}
+.pricing-section .tariff-card h2{font-size:28px;line-height:1.2;margin:0 0 24px;letter-spacing:-.025em}
+.tariff-schedule{display:grid;gap:6px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:15px}
+.tariff-schedule span{color:var(--muted);font-size:13px}
+.tariff-schedule strong{font-weight:650}
+.tariff-rates{display:grid;gap:16px;padding:24px 0;flex:1;align-content:start}
+.tariff-rate .price{margin:0;font-size:34px}
+.tariff-rate p{margin:4px 0 0;font-size:14px}
+.tariff-card>.btn{width:100%;margin-top:auto}
+.tariff-full-day{display:grid;grid-template-columns:1.2fr 1fr auto;align-items:center;gap:40px;margin-top:24px;background:linear-gradient(120deg,#fff9e8,#edf7e5)}
+.tariff-full-day .tariff-heading{justify-content:flex-start}
+.tariff-full-day .tariff-rates{padding:0}
+.tariff-full-day>.btn{margin-top:0}
+@media(max-width:980px){.pricing-grid{grid-template-columns:1fr}.tariff-full-day{grid-template-columns:1fr;gap:24px}.tariff-card{padding:26px}.tariff-full-day .tariff-rates{padding:0}}
+/* Program details */
+.program-section{scroll-margin-top:110px}
+.program-section .program-intro{max-width:880px;margin-bottom:38px}
+.program-section .program-intro h2{font-size:clamp(30px,3.6vw,46px);margin-bottom:24px}
+.program-blocks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.program-block{padding:clamp(24px,3vw,36px);border-radius:24px 34px 24px 30px;background:linear-gradient(145deg,#fff,#f7fbf1);box-shadow:0 12px 38px rgba(64,105,70,.06)}
+.program-block h3{font-size:26px;color:var(--ink-strong);margin-top:0;padding-bottom:18px;border-bottom:2px solid var(--sun-soft)}
+.program-block p:last-child{margin-bottom:0}
+.program-block-wide{grid-column:1/-1}
+.program-activities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px}
+.program-activity{border-left:3px solid var(--soft-green);padding-left:20px}
+.program-activity h4,.program-time{font-size:20px;line-height:1.4;color:var(--ink-strong);margin:0 0 12px}
+.program-time{margin-top:24px;padding:12px 16px;border-radius:12px;background:var(--sun-soft)}
+.program-nav{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.program-nav a{text-decoration:none;font-weight:750;border:1px solid #adc79f;background:#fffdf6;padding:12px 20px;border-radius:99px}
+.program-nav a:hover{background:var(--mint)}
+@media(max-width:680px){.program-blocks,.program-activities{grid-template-columns:1fr}.program-block-wide{grid-column:auto}.program-nav a{width:100%;text-align:center}.program-block h3{font-size:24px}}
+/* Photo gallery: original photographs */
+.gallery-real{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:24px}
+.gallery-photo{margin:0;border-radius:22px;overflow:hidden;background:var(--sage);box-shadow:var(--shadow);border:1px solid var(--line)}
+.gallery-photo img{display:block;width:100%;height:auto}
+@media(max-width:680px){.gallery-real{grid-template-columns:1fr;gap:18px}}

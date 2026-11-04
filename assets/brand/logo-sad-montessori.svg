@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
-  <title id="title">Сад Монтессори — логотип</title>
-  <desc id="desc">Солнце освещает растущий зелёный росток; рядом надпись Сад Монтессори.</desc>
+  <title id="title">Детский сад Монтессори — логотип</title>
+  <desc id="desc">Солнце освещает растущий зелёный росток; рядом надпись Детский сад Монтессори.</desc>
   <defs>
     <style>
       .green { fill: #6FA486; }
@@ -27,7 +27,7 @@
     <path class="green" d="M157 137c10-45 39-71 78-77-5 39-31 69-78 77z"/>
   </g>
   <g class="wordmark" transform="translate(360 95)">
-    <text x="0" y="0" font-size="92" class="green">Сад</text>
+    <text x="0" y="0" font-size="62" class="green">Детский сад</text>
     <text x="0" y="112" font-size="86" class="text-dark">Монтессори</text>
     <text x="4" y="168" font-size="28" class="locality">ЖУЛЕБИНО</text>
   </g>

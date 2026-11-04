@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 260" role="img" aria-labelledby="title desc">
-  <title id="title">Сад Монтессори Жулебино — мобильный горизонтальный логотип</title>
-  <desc id="desc">Горизонтальный логотип для мобильной шапки: солнце и росток слева, справа крупная надпись Сад Монтессори и подпись Жулебино.</desc>
+  <title id="title">Детский сад Монтессори Жулебино — мобильный горизонтальный логотип</title>
+  <desc id="desc">Горизонтальный логотип для мобильной шапки: солнце и росток слева, справа крупная надпись Детский сад Монтессори и подпись Жулебино.</desc>
   <defs>
     <style>
       .green { fill: #6FA486; }
@@ -25,7 +25,7 @@
     <path class="green" d="M109 88c8-34 30-55 62-61-4 31-25 54-62 61z"/>
   </g>
   <g transform="translate(230 88)">
-    <text x="0" y="0" font-size="66" class="wordmark green">Сад Монтессори</text>
+    <text x="0" y="0" font-size="46" class="wordmark green">Детский сад Монтессори</text>
     <text x="2" y="52" font-size="28" class="submark">ЖУЛЕБИНО</text>
   </g>
 </svg>

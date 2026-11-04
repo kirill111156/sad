@@ -55,7 +55,7 @@ if (!preg_match('/^[0-9+()\-\s]{6,30}$/u', $phone)) {
 }
 
 $recipient = 'katerina.da2005@yandex.ru';
-$subjectText = 'Новая заявка — Сад Мир Монтессори';
+$subjectText = 'Новая заявка — Детский сад Мир Монтессори';
 $subject = function_exists('mb_encode_mimeheader')
     ? mb_encode_mimeheader($subjectText, 'UTF-8', 'B', "\r\n")
     : '=?UTF-8?B?' . base64_encode($subjectText) . '?=';
@@ -72,7 +72,7 @@ $body = implode("\n", [
 ]);
 
 $headers = implode("\r\n", [
-    'From: Сад Мир Монтессори <noreply@montessori-zhulebino.ru>',
+    'From: Детский сад Мир Монтессори <noreply@montessori-zhulebino.ru>',
     'Content-Type: text/plain; charset=UTF-8',
     'Content-Transfer-Encoding: 8bit',
     'X-Mailer: PHP/' . PHP_VERSION,
